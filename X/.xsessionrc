@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+## ~/.xsessionrc
+#
+## Executed by startx (run your window manager from here)
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+	for f in /etc/X11/xinit/xinitrc.d/*; do
+		if [ -x "$f" ]; then
+			# shellcheck source=/dev/null
+			. "$f"
+		fi
+	done
+	unset f
+fi
+
+# run xprofile
+if [ -f ~/.xprofile ]; then
+	# shellcheck source=/dev/null
+	. ~/.xprofile
+fi
+
+# run local xhost
+xhost local:root
+
+# start i3
+exec i3 -V >> ~/.config/i3/logfile 2>&1

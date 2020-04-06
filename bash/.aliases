@@ -1,0 +1,47 @@
+#!/bin/bash
+
+if command -v xdg-open >/dev/null 2>&1; then
+	alias open=xdg-open;
+fi
+
+command -v xdg-open >/dev/null 2>&1 && alias open=xdg-open
+
+# Linux specific aliases
+alias open=xdg-open
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# Easier navigation: .., ..., ...., .....
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias g="git"
+alias h="history"
+
+# List all files colorized in long format
+alias l="ls -lhF --color"
+
+# List all files colorized in long format, including dot files
+alias la="ls -lahF --color"
+
+# List only directories
+alias lsd="ls -lhF --color | grep --color=never '^d'"
+
+# Always use color output for `ls`
+alias ls="command ls --color"
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto '
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Copy file interactive (prompt before overwrite)
+alias cp='cp -i'
+
+# Move file interactive (prompt before overwrite)
+alias mv='mv -i'

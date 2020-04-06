@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# keyboard preferences (run `man xkeyboard-config` to see options)
+#  - Set Compose key to Right Win
+#  - Caps Lock as Ctrl
+#  - Both Shift together enable Caps Lock; one Shift key disables it
+setxkbmap \
+	-option compose:rwin \
+	-option ctrl:nocaps \
+	-option shift:both_capslock_cancel
+
+# set background
+if [ -f ~/.fehbg ]; then
+	# shellcheck source=/dev/null
+	. ~/.fehbg
+fi
+
+# shadows and stuff
+# xcompmgr -c &
