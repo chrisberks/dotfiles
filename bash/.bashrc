@@ -92,7 +92,7 @@ if ! shopt -oq posix; then
 	fi
 fi
 
-for file in ~/.{bash_prompt,aliases,functions,extra,exports}; do
+for file in ~/.{bash_prompt,aliases,functions,path,extra,exports}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		# shellcheck source=/dev/null
 		. "$file"

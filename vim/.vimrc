@@ -143,3 +143,11 @@ inoremap <Down> <nop>
 inoremap <Up> <nop>
 inoremap <Right> <nop>
 " inoremap <BS> <nop>
+
+
+
+"
+" File type settings
+"
+" Go settings
+autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
