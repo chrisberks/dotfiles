@@ -36,7 +36,7 @@ For other Go versions see: [golang.org/dl](https://golang.org/dl/)
 
 Rebuild stdlib for faster builds:
 ```console
-$ sudo chown -R "${user}" /usr/local/go/pkg
+$ sudo chown -R $USER /usr/local/go/pkg
 $ CGO_ENABLED=0 go install -a -installsuffix cgo std
 ```
 
@@ -99,13 +99,15 @@ $ curl -Lo /etc/bash_completion.d/docker-compose https://raw.githubusercontent.c
 Vim plugins
 -----------
 
-Plugins are managed using Vim's native packages ([Vim8 packages](https://vimhelp.org/repeat.txt.html#packages)) with Git Submodules.
+Plugins are managed using Vim's native packages ([Vim8 packages][]) with Git
+Submodules.
 
 See `:help packages` in Vim for how packages are used.
 
 Add a plugin:
 ```console
-$ git submodule add https://github.com/fatih/vim-go.git ~/.vim/pack/go/opt/vim-go
+$ cd ~/dotfiles
+$ git submodule add https://github.com/fatih/vim-go.git vim/.vim/pack/go/opt/vim-go
 ```
 
 
@@ -118,3 +120,5 @@ People who don't know they've contributed
 
 
   [Docker Daemon Attack Surface]: https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+
+  [Vim8 packages]: https://vimhelp.org/repeat.txt.html#packages
