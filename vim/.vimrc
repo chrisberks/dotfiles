@@ -116,6 +116,17 @@ endif
 
 
 
+"
+" ALE
+"
+let g:ale_fix_on_save = 1       " Format on save for positive reinforcement
+let g:ale_set_highlights = 0    " Disable ugly highlights
+
+" Show full linter message for problem nearest the cursor
+nnoremap <leader>? :ALEDetail<cr>
+
+
+
 " Clear search highlighting
 nnoremap <silent> <leader>/ :nohlsearch<cr>
 
