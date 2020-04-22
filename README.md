@@ -112,6 +112,58 @@ $ cp ~/.asdf/completions/asdf.bash /etc/bash_completion.d/asdf
 ```
 
 
+Install Python
+--------------
+
+Install prerequisites:
+```console
+$ sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git --no-install-recommends
+```
+
+Install asdf-python plugin:
+```console
+$ asdf plugin-add python
+```
+
+See latest Python version (CPython):
+```console
+$ asdf list all python | grep ^[0-9][0-9.]*$ | tail -n1
+```
+
+Install Python using asdf-vm:
+```console
+$ PYTHON_VERSION=$(asdf list all python | grep ^[0-9][0-9.]*$ | tail -n1)
+$ asdf install python $PYTHON_VERSION
+```
+
+Set global Python version:
+```console
+$ asdf global python $PYTHON_VERSION
+$ pip install --upgrade pip
+```
+
+Install formatting tools (used by ALE):
+```console
+$ pip install black flake8 isort
+$ asdf reshim python
+```
+
+> This will make the `black`, `flake8` and `isort` binaries available in the
+> environment. These are also used by ALE, in Vim, to lint and fix code.
+
+Create a `pyproject.toml` and `setup.cfg` in your Python project directory.
+
+Put your configuation for...
+
+- [Black](https://black.readthedocs.io/) in `pyproject.toml` under `[tool.black]`
+- [Flake8](https://flake8.pycqa.org/) in `setup.cfg` under `[flake8]`
+- [isort](https://github.com/timothycrosley/isort) in `pyproject.toml` under `[tool.isort]`
+
+... and ALE will do the rest.
+
+See Python project [configuration examples](examples/python/).
+
+
 Vim plugins
 -----------
 

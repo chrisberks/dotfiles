@@ -122,6 +122,16 @@ endif
 let g:ale_fix_on_save = 1       " Format on save for positive reinforcement
 let g:ale_set_highlights = 0    " Disable ugly highlights
 
+" Fixers
+let g:ale_fixers = {
+      \ 'python': ['isort', 'black'],
+\}
+
+" Linters
+let g:ale_linters = {
+      \ 'python': ['flake8'],
+\}
+
 " Show full linter message for problem nearest the cursor
 nnoremap <leader>? :ALEDetail<cr>
 
@@ -168,3 +178,6 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 
 " Go settings
 autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
+
+" Python settings
+autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=80 expandtab
