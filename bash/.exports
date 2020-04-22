@@ -15,11 +15,14 @@ export HISTIGNORE=" *:ls:cd:cd -:pwd:exit:date:* --help:* -h";
 export LANG="en_GB.UTF-8";
 export LC_ALL=$LANG;
 
-# make less more friendly for non-text input files, see lesspipe(1)
+# Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && export LESSOPEN="|lesspipe %s"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X";
+
+# Enforce content signatures or explicit hashes for Docker CLI
+export DOCKER_CONTENT_TRUST=1
 
 # Set xdg data dirs for dmenu to source
 export XDG_DATA_DIRS=/usr/share/

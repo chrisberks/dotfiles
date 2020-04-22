@@ -149,5 +149,8 @@ inoremap <Right> <nop>
 "
 " File type settings
 "
+" Dockerfile settings
+autocmd FileType dockerfile setlocal noexpandtab
+
 " Go settings
 autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
