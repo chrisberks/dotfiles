@@ -152,5 +152,8 @@ inoremap <Right> <nop>
 " Dockerfile settings
 autocmd FileType dockerfile setlocal noexpandtab
 
+" Git
+autocmd FileType gitcommit setlocal spell textwidth=72
+
 " Go settings
 autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
