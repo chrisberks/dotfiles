@@ -96,6 +96,22 @@ $ curl -Lo /etc/bash_completion.d/docker-compose https://raw.githubusercontent.c
 ```
 
 
+Install asdf-vm
+---------------
+
+Install asdf-vm:
+```console
+$ ASDF_VERSION=$(curl -sSL https://raw.githubusercontent.com/asdf-vm/asdf/master/VERSION)
+$ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $ASDF_VERSION
+```
+
+Include completions for Bash:
+```console
+$ mkdir -p /etc/bash_completion.d
+$ cp ~/.asdf/completions/asdf.bash /etc/bash_completion.d/asdf
+```
+
+
 Vim plugins
 -----------
 

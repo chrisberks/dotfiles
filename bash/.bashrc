@@ -99,3 +99,9 @@ for file in ~/.{bash_prompt,aliases,functions,path,extra,exports}; do
 	fi
 done
 unset file
+
+# asdf-vm
+if [ -d ~/.asdf ]; then
+	# shellcheck source=/dev/null
+	. ~/.asdf/asdf.sh
+fi
