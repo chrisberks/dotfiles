@@ -91,6 +91,12 @@ if ! shopt -oq posix; then
 		. /etc/bash_completion
 	fi
 fi
+if [ -d /etc/bash_completion.d/ ]; then
+	for file in /etc/bash_completion.d/* ; do
+		# shellcheck source=/dev/null
+		. "$file"
+	done
+fi
 
 for file in ~/.{bash_prompt,aliases,functions,path,extra,exports}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
