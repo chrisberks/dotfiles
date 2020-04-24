@@ -181,3 +181,6 @@ autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
 
 " Python settings
 autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=80 expandtab
+
+" TOML settings
+autocmd FileType toml setlocal noexpandtab
