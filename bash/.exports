@@ -26,3 +26,6 @@ export DOCKER_CONTENT_TRUST=1
 
 # Set xdg data dirs for dmenu to source
 export XDG_DATA_DIRS=/usr/share/
+
+# Speed-up NPM package installs
+export ASDF_SKIP_RESHIM=1

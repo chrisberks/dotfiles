@@ -124,12 +124,16 @@ let g:ale_set_highlights = 0    " Disable ugly highlights
 
 " Fixers
 let g:ale_fixers = {
+      \ 'javascript': ['eslint', 'prettier'],
       \ 'python': ['isort', 'black'],
+      \ 'typescript': ['eslint', 'prettier'],
 \}
 
 " Linters
 let g:ale_linters = {
+      \ 'javascript': ['eslint'],
       \ 'python': ['flake8'],
+      \ 'typescript': ['eslint'],
 \}
 
 " Show full linter message for problem nearest the cursor
@@ -178,6 +182,9 @@ autocmd FileType gitcommit setlocal spell textwidth=72
 
 " Go settings
 autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
+
+" JavaScript and TypeScript settings
+autocmd FileType {java,type}script setlocal ts=2 sts=2 sw=2 expandtab
 
 " Python settings
 autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=80 expandtab

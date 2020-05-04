@@ -13,3 +13,9 @@
 [submodule "vim/.vim/pack/toml/start/vim-toml"]
 	path = vim/.vim/pack/toml/start/vim-toml
 	url = git@github.com:cespare/vim-toml.git
+[submodule "vim/.vim/pack/javascript/opt/vim-jsx-pretty"]
+	path = vim/.vim/pack/javascript/start/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "vim/.vim/pack/typescript/start/typescript-vim"]
+	path = vim/.vim/pack/typescript/start/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git

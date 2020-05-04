@@ -164,6 +164,43 @@ Put your configuation for...
 See Python project [configuration examples](examples/python/).
 
 
+Install Node.js
+---------------
+
+Install prerequisites:
+```console
+$ sudo apt install -y dirmngr gpg curl --no-install-recommends
+```
+
+Install asdf-nodejs plugin:
+```console
+$ asdf plugin-add nodejs
+```
+
+Add the Node.js release team's gpg keys:
+```console
+$ gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 4ED778F539E3634C779C87C6D7062848A1AB005C 94AE36675C464D64BAFA68DD7434390BDBE9B9C5 71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 DD8F2338BAE7501E3DD5AC78C273792F7D83545D A48C2BEE680E841632CD4E44F07496B3EB3C1762 B9E2F5981AA6E0CD28160D9FF13993A75599653C
+```
+
+> Latest keys are in the Node.js [README.md](https://github.com/nodejs/node/#release-keys).
+
+See latest Node.js version:
+```console
+$ asdf list all nodejs | grep ^[0-9][0-9.]*$ | tail -n1
+```
+
+Install Node.js using asdf-vm:
+```console
+$ NODE_VERSION=$(asdf list all nodejs | grep ^[0-9][0-9.]*$ | tail -n1)
+$ asdf install nodejs $NODE_VERSION
+```
+
+Set global Node.js version:
+```console
+$ asdf global nodejs $NODE_VERSION
+```
+
+
 Vim plugins
 -----------
 
