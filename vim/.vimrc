@@ -124,6 +124,7 @@ let g:ale_set_highlights = 0    " Disable ugly highlights
 
 " Fixers
 let g:ale_fixers = {
+      \ 'elm': ['elm-format'],
       \ 'javascript': ['eslint', 'prettier'],
       \ 'python': ['isort', 'black'],
       \ 'typescript': ['eslint', 'prettier'],
@@ -131,6 +132,7 @@ let g:ale_fixers = {
 
 " Linters
 let g:ale_linters = {
+      \ 'elm': ['elm_ls', 'make'],
       \ 'javascript': ['eslint'],
       \ 'python': ['flake8'],
       \ 'typescript': ['eslint'],
@@ -176,6 +178,9 @@ inoremap <Right> <nop>
 "
 " Dockerfile settings
 autocmd FileType dockerfile setlocal noexpandtab
+
+" Elm settings
+autocmd BufNewFile,BufRead *.elm setlocal ts=4 sw=4 sts=4 expandtab
 
 " Git
 autocmd FileType gitcommit setlocal spell textwidth=72

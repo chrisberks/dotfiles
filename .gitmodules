@@ -19,3 +19,6 @@
 [submodule "vim/.vim/pack/typescript/start/typescript-vim"]
 	path = vim/.vim/pack/typescript/start/typescript-vim
 	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "vim/.vim/pack/elm/start/elm-vim"]
+	path = vim/.vim/pack/elm/start/elm-vim
+	url = git@github.com:ElmCast/elm-vim.git
