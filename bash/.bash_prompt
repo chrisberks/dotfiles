@@ -8,7 +8,12 @@
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
 	export TERM='gnome-256color';
 elif infocmp rxvt-unicode-256color >/dev/null 2>&1; then
-	export TERM='rxvt-unicode';
+	# Vim uses terminfo to determine how many colors are supported, then sets
+	# t_Co to match. Debian configures rxvt-unicode with 256-color support.
+	# terminfo:
+	#     rxvt-unicode          -> colors=88
+	#     rxvt-unicode-256color -> colors=256 (0x100)
+	export TERM='rxvt-unicode-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
 	export TERM='xterm-256color';
 fi;

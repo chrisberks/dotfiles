@@ -96,6 +96,14 @@ syntax enable
 
 
 
+" Base16 colours
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+
+
 " Open help vertically
 command! -nargs=* -complete=help Help vertical belowright help <args>
 autocmd FileType help wincmd L
@@ -105,7 +113,7 @@ autocmd FileType help wincmd L
 "
 " vim-airline
 "
-let g:airline_theme = 'simple'
+let g:airline_theme = 'base16_default'
 let g:airline_powerline_fonts=1
 
 " Use powerline fonts when not in a ssh session

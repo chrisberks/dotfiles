@@ -22,3 +22,9 @@
 [submodule "vim/.vim/pack/elm/start/elm-vim"]
 	path = vim/.vim/pack/elm/start/elm-vim
 	url = git@github.com:ElmCast/elm-vim.git
+[submodule "base16/.config/base16-shell"]
+	path = base16/.config/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
+[submodule "vim/.vim/pack/utils/start/base16-vim"]
+	path = vim/.vim/pack/utils/start/base16-vim
+	url = git@github.com:chriskempson/base16-vim.git

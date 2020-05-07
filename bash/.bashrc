@@ -111,3 +111,8 @@ if [ -d ~/.asdf ]; then
 	# shellcheck source=/dev/null
 	. ~/.asdf/asdf.sh
 fi
+
+# Base16 Shell
+if [ -s ~/.config/base16-shell/profile_helper.sh ]; then
+    eval "$(~/.config/base16-shell/profile_helper.sh)"
+fi
