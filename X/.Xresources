@@ -24,25 +24,25 @@ URxvt.scrollBar: false
 
 ! fonts
 URxvt.font:\
-        xft:IBM Plex Mono:style=Regular:pixelsize=22:antialias=true:hinting=full,\
+        xft:IBM Plex Mono:style=Regular:pixelsize=18:antialias=true:hinting=full,\
         xft:Hack Nerd Font Mono:style=Regular,\
         xft:Noto Color Emoji,\
         xft:Symbola
 URxvt.boldFont:\
-        xft:IBM Plex Mono:style=Bold:pixelsize=22:antialias=true:hinting=full,\
+        xft:IBM Plex Mono:style=Bold:pixelsize=18:antialias=true:hinting=full,\
         xft:Hack Nerd Font Mono:style=Bold,\
         xft:Noto Color Emoji,\
         xft:Symbola
 URxvt.italicFont:\
-        xft:IBM Plex Mono:style=Italic:pixelsize=22:antialias=true:hinting=full,\
+        xft:IBM Plex Mono:style=Italic:pixelsize=18:antialias=true:hinting=full,\
         xft:Hack Nerd Font Mono:style=Italic,\
         xft:Noto Color Emoji,\
         xft:Symbola
 URxvt.boldItalicFont:\
-        xft:IBM Plex Mono:style=Bold Italic:pixelsize=22:antialias=true:hinting=full,\
+        xft:IBM Plex Mono:style=Bold Italic:pixelsize=18:antialias=true:hinting=full,\
         xft:Noto Color Emoji,\
         xft:Symbola
-URxvt.letterSpace: 1
+URxvt.letterSpace: 0
 
 ! disable default bindings for Ctrl-Shift
 URxvt.iso14755:             false
