@@ -28,3 +28,15 @@
 [submodule "vim/.vim/pack/utils/start/base16-vim"]
 	path = vim/.vim/pack/utils/start/base16-vim
 	url = git@github.com:chriskempson/base16-vim.git
+[submodule "vim/.vim/pack/utils/start/vim-gitgutter"]
+	path = vim/.vim/pack/utils/start/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "vim/.vim/pack/utils/start/vim-commentary"]
+	path = vim/.vim/pack/utils/start/vim-commentary
+	url = git@github.com:tpope/vim-commentary.git
+[submodule "vim/.vim/pack/utils/start/vim-surround"]
+	path = vim/.vim/pack/utils/start/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "vim/.vim/pack/utils/start/vim-repeat"]
+	path = vim/.vim/pack/utils/start/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
