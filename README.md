@@ -96,6 +96,36 @@ $ curl -Lo /etc/bash_completion.d/docker-compose https://raw.githubusercontent.c
 ```
 
 
+Install restic
+--------------
+
+See latest restic version:
+```console
+$ curl -sSL https://api.github.com/repos/restic/restic/releases/latest | jq --raw-output .tag_name
+```
+
+Install restic from binaries:
+```console
+$ RESTIC_VERSION=$(curl -sSL https://api.github.com/repos/restic/restic/releases/latest | jq --raw-output .tag_name)
+$ RESTIC_URI="https://github.com/restic/restic/releases/download/${RESTIC_VERSION}"
+$ curl -Lo /tmp/restic.bz2 "${RESTIC_URI}/restic_${RESTIC_VERSION#v}_$(uname -s)_$(dpkg --print-architecture).bz2"
+$ sudo sh -c 'bzip2 -dc /tmp/restic.bz2 > /usr/local/bin/restic'
+$ sudo chmod +x /usr/local/bin/restic
+```
+
+Include generated completions for Bash:
+```console
+$ mkdir -p /etc/bash_completion.d
+$ sudo /usr/local/bin/restic generate --bash-completion /etc/bash_completion.d/restic
+```
+
+Include restic man pages:
+```console
+$ sudo mkdir -p /usr/local/share/man/man1
+$ sudo /usr/local/bin/restic generate --man /usr/local/share/man/man1/
+```
+
+
 Install asdf-vm
 ---------------
 
