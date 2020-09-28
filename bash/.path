@@ -3,5 +3,8 @@
 # go path
 export GOPATH="${HOME}/.go"
 
+# update path
+export PATH=${PATH}:/sbin
+
 # add go path
 export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
