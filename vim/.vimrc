@@ -109,7 +109,6 @@ command! -nargs=* -complete=help Help vertical belowright help <args>
 autocmd FileType help wincmd L
 
 
-
 "
 " vim-airline
 "
@@ -204,3 +203,6 @@ autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=80 expandtab
 
 " TOML settings
 autocmd FileType toml setlocal noexpandtab
+
+" Vader settings
+autocmd BufNewFile,BufRead *.vader setlocal ts=2 sts=2 sw=2 expandtab

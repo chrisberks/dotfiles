@@ -43,3 +43,6 @@
 [submodule "vim/.vim/pack/utils/start/vim-ledger"]
 	path = vim/.vim/pack/utils/start/vim-ledger
 	url = git@github.com:ledger/vim-ledger.git
+[submodule "vim/.vim/pack/vader/start/vader.vim"]
+	path = vim/.vim/pack/vader/start/vader.vim
+	url = git@github.com:junegunn/vader.vim.git
