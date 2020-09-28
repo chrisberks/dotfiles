@@ -115,6 +115,14 @@ autocmd FileType help wincmd L
 let g:airline_theme = 'base16_default'
 let g:airline_powerline_fonts=1
 
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ' ☕'
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = '✦'
+
 " Use powerline fonts when not in a ssh session
 let g:remoteSession = ($STY == "")
 if !g:remoteSession
