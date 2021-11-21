@@ -202,8 +202,12 @@ inoremap <Right> <nop>
 "
 " File type settings
 "
+" CSS and Sass settings
+autocmd FileType {s,}css setlocal ts=2 sw=2 sts=2 expandtab
+
 " Dockerfile settings
 autocmd FileType dockerfile setlocal noexpandtab
+autocmd BufNewFile,BufRead Dockerfile.* setlocal noexpandtab
 
 " Elm settings
 autocmd BufNewFile,BufRead *.elm setlocal ts=4 sw=4 sts=4 expandtab
@@ -217,6 +221,9 @@ autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
 " JavaScript and TypeScript settings
 autocmd FileType {java,type}script setlocal ts=2 sts=2 sw=2 expandtab
 
+" Markdown settings
+autocmd FileType markdown setlocal colorcolumn=70
+
 " Python settings
 autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=88 colorcolumn=89 expandtab
 
@@ -225,3 +232,6 @@ autocmd FileType toml setlocal noexpandtab
 
 " Vader settings
 autocmd BufNewFile,BufRead *.vader setlocal ts=2 sts=2 sw=2 expandtab
+
+" YAML settings
+autocmd FileType yaml setlocal ts=2 sw=2 sts=2 expandtab
