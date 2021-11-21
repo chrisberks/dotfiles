@@ -151,7 +151,7 @@ let g:ale_fixers = {
 let g:ale_linters = {
       \ 'elm': ['elm_ls', 'make'],
       \ 'javascript': ['eslint'],
-      \ 'python': ['flake8'],
+      \ 'python': ['flake8', 'mypy'],
       \ 'typescript': ['eslint'],
 \}
 
@@ -218,7 +218,7 @@ autocmd BufNewFile,BufRead *.go setlocal ts=4 sw=4 sts=4 noexpandtab
 autocmd FileType {java,type}script setlocal ts=2 sts=2 sw=2 expandtab
 
 " Python settings
-autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=80 expandtab
+autocmd BufNewFile,BufRead *.py setlocal ts=4 sw=4 sts=4 tw=88 colorcolumn=89 expandtab
 
 " TOML settings
 autocmd FileType toml setlocal noexpandtab
