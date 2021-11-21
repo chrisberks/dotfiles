@@ -8,3 +8,6 @@ export PATH=${PATH}:/sbin
 
 # add go path
 export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
+
+# add GHC and friends (Haskell)
+export PATH="/opt/ghc/bin:${PATH}"

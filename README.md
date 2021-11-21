@@ -270,6 +270,25 @@ $ asdf global nodejs $NODE_VERSION
 ```
 
 
+Install Haskell
+---------------
+
+Add GHC PPA to source list:
+```console
+$ sudo su -c 'echo -n "deb http://downloads.haskell.org/debian buster main" > /etc/apt/sources.list.d/haskell.list'
+```
+
+Add the GHC gpg key:
+```console
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BA3CBA3FFE22B574
+```
+
+```console
+$ sudo apt update
+$ sudo apt install ghc-8.10.2 cabal-install-3.2
+```
+
+
 Install Firefox
 ---------------
 
