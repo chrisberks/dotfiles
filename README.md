@@ -270,6 +270,51 @@ $ asdf global nodejs $NODE_VERSION
 ```
 
 
+Install Firefox
+---------------
+
+> Windows 32bit              os=win
+> Windows 64bit              os=win64
+> OS X                       os=osx
+> Linux x86_64               os=linux64
+> Linux i686                 os=linux
+
+```console
+$ declare -A os=( ["x86_64"]="64" ["i686"]="" )
+$ FIREFOX_OS="linux${os[$(uname -m)]}"
+$ curl -sSL "https://download.mozilla.org/?product=firefox-latest&os=${FIREFOX_OS}&lang=en-GB" | sudo tar -v -C /opt -xj
+
+$ curl -sSL "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-GB" | sudo tar -v -C /opt -xj
+```
+
+
+Install Thunderbird
+-------------------
+
+```console
+$ curl -sSL "https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=en-GB" | sudo tar -v -C /opt -xj
+```
+
+
+Install Google Chrome
+---------------------
+
+Add Google Chrome to source list:
+```console
+$ sudo su -c 'echo -n "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
+```
+
+Add the Google Chrome public key:
+```console
+$ curl -sSL https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+```
+
+```console
+$ sudo apt update
+$ sudo apt install google-chrome-stable --no-install-recommends
+```
+
+
 Vim plugins
 -----------
 
