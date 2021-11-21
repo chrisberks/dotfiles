@@ -138,6 +138,7 @@ endif
 "
 let g:ale_fix_on_save = 1       " Format on save for positive reinforcement
 let g:ale_set_highlights = 0    " Disable ugly highlights
+let g:ale_list_vertical = 1     " Open ALE windows vertically
 
 " Fixers
 let g:ale_fixers = {
