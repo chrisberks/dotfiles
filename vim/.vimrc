@@ -170,6 +170,16 @@ nmap <silent> <leader>r :SkBuffer<cr>
 
 
 
+" LaTeX
+function! Synctex()
+  execute "!pdflatex " . bufname('%')
+  " redraw!
+endfunction
+nmap <C-enter> :call Synctex()<cr>
+
+
+
+
 " Clear search highlighting
 nnoremap <silent> <leader>/ :nohlsearch<cr>
 
