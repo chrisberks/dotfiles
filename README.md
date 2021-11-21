@@ -126,6 +126,45 @@ $ sudo /usr/local/bin/restic generate --man /usr/local/share/man/man1/
 ```
 
 
+Install fd
+----------
+
+See latest fd version:
+```console
+$ FD_VERSION=$(curl -sSL https://api.github.com/repos/sharkdp/fd/releases/latest | jq --raw-output .tag_name)
+$ curl -Lo /tmp/fd.deb "https://github.com/sharkdp/fd/releases/download/${FD_VERSION}/fd_${FD_VERSION#v}_amd64.deb"
+$ sudo dpkg -i /tmp/fd.deb
+```
+
+
+Install ripgrep (rg)
+--------------------
+
+See latest ripgrep version:
+```console
+$ RIPGREP_VERSION=$(curl -sSL https://api.github.com/repos/BurntSushi/ripgrep/releases/latest | jq --raw-output .tag_name)
+$ curl -Lo /tmp/ripgrep.deb "https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}/ripgrep_${RIPGREP_VERSION}_amd64.deb"
+$ sudo dpkg -i /tmp/ripgrep.deb
+```
+
+
+Install skim (sk)
+-----------------
+
+See latest skim version:
+```console
+$ SKIM_VERSION=$(curl -sSL https://api.github.com/repos/lotabout/skim/releases/latest | jq --raw-output .tag_name)
+$ SKIM_URI="https://github.com/lotabout/skim/releases/download/${SKIM_VERSION}/skim-${SKIM_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+$ curl -sSL $SKIM_URI | sudo tar -v -C /usr/local/bin -xz
+```
+
+Install vim plugin from skim's repo:
+```console
+$ mkdir -p ~/.vim/pack/utils/start/skim/plugin
+$ curl -Lo ~/.vim/pack/utils/start/skim/plugin/skim.vim https://raw.githubusercontent.com/lotabout/skim/master/plugin/skim.vim
+```
+
+
 Install asdf-vm
 ---------------
 

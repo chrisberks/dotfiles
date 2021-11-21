@@ -9,6 +9,8 @@ filetype plugin indent on     " required
 let g:mapleader = ','
 
 
+set rtp+=~/.skim
+
 
 "
 " Settings
@@ -155,6 +157,15 @@ let g:ale_linters = {
 
 " Show full linter message for problem nearest the cursor
 nnoremap <leader>? :ALEDetail<cr>
+
+
+
+" Fuzzy finding with fzf or skim
+let g:fzf_command_prefix = 'Sk'
+let g:skim_history_dir = '~/.local/share/skim-history'
+nmap <silent> <C-p> :SK<cr>
+nmap <silent> <leader>t :SK<cr>
+nmap <silent> <leader>r :SkBuffer<cr>
 
 
 

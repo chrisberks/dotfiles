@@ -46,3 +46,6 @@
 [submodule "vim/.vim/pack/vader/start/vader.vim"]
 	path = vim/.vim/pack/vader/start/vader.vim
 	url = git@github.com:junegunn/vader.vim.git
+[submodule "vim/.vim/pack/utils/start/skim.vim"]
+	path = vim/.vim/pack/utils/start/skim.vim
+	url = https://github.com/lotabout/skim.vim.git
